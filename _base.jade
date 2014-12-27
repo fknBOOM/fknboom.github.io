@@ -2,13 +2,18 @@ doctype html
 html(lang="en")
 	head
 		meta(charset="utf-8")
-		meta(http-equiv="X-UA-Compatible", content="IE=edge")
-		meta(name="author", content="Matt McKellar-Spence")
-		meta(name="description", content="GitHub page of fknBOOM")
-		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(content="IE=edge", http-equiv="X-UA-Compatible")
+		meta(content="Matt McKellar-Spence", name="author")
+		meta(content="GitHub page of fknBOOM", name="description", )
+		meta(content="width=device-width, initial-scale=1", name="viewport")
 		title fknBOOM
-		link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
-		link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css")
+
+		block css
+			include ./_css.jade
 	body
 		.container
 			block content
+		footer.container
+			hr
+			ul
+				li: a(href="https://github.com/fknBOOM/fknboom.github.io") View on GitHub
